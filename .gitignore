@@ -5,3 +5,6 @@ SAM-6D/Data/BOP-Templates
 SAM-6D/Data/MegaPose-Training-Data
 **/checkpoints/
 **/__pycache__/
+**/build/
+**/dist/
+**/*.egg-info/

@@ -1,5 +1,6 @@
 ### Create conda environment
 conda env create -f environment.yaml
+conda init
 conda activate sam6d
 
 ### Install pointnet2
@@ -17,3 +18,9 @@ cd ../
 ### Download PEM pretrained model
 cd Pose_Estimation_Model
 python download_sam6d-pem.py
+
+### 
+wget https://download.blender.org/release/Blender3.3/blender-3.3.1-linux-x64.tar.xz
+mkdir -p ~/blender
+tar -xvf blender-3.3.1-linux-x64.tar.xz -C ~/blender/
+rm blender-3.3.1-linux-x64.tar.xz
