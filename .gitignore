@@ -1,0 +1,7 @@
+SAM-6D/Data/*.deb
+SAM-6D/Data/*.zip
+SAM-6D/Data/BOP
+SAM-6D/Data/BOP-Templates
+SAM-6D/Data/MegaPose-Training-Data
+**/checkpoints/
+**/__pycache__/
