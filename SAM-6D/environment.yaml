@@ -9,6 +9,7 @@ dependencies:
   - pip
   - python=3.9.6
   - pip:
+    - numpy<2  # Need for pytorch that build with numpy 1.x, maybe can remove in the future
     - setuptools==69.5.1  # Need to build pointnet2, higher versions cause errors
     - torch==2.0.0
     - torchvision==0.15.1

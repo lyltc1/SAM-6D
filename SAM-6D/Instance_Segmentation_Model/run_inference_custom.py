@@ -130,7 +130,6 @@ def run_inference(segmentor_model, output_dir, cad_path, rgb_path, depth_path, c
         image = Image.open(os.path.join(template_dir, 'rgb_'+str(idx)+'.png'))
         mask = Image.open(os.path.join(template_dir, 'mask_'+str(idx)+'.png'))
         boxes.append(mask.getbbox())
-
         image = torch.from_numpy(np.array(image.convert("RGB")) / 255).float()
         mask = torch.from_numpy(np.array(mask.convert("L")) / 255).float()
         image = image * mask[:, :, None]

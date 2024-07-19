@@ -8,3 +8,5 @@ SAM-6D/Data/MegaPose-Training-Data
 **/build/
 **/dist/
 **/*.egg-info/
+**/.vscode/
+**/Example/outputs/**
