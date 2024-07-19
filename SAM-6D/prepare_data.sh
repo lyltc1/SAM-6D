@@ -39,7 +39,7 @@ conda activate sam6d
 cd Data/
 python download_models.py --dataset GSO
 unzip google_scanned_objects.zip -d .
-azcopy copy ./google_scanned_objects 'https://embodiedaidata.blob.core.windows.net/dataset2/v-yonlin/Data/BOP/MegaPose-Training-Data/MegaPose-GSO?sv=2023-01-03&spr=https%2Chttp&st=2024-07-19T03%3A48%3A36Z&se=2024-07-26T03%3A48%3A00Z&skoid=63a24da2-bb37-4f2b-95a1-4253e0f68a4a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2024-07-19T03%3A48%3A36Z&ske=2024-07-26T03%3A48%3A00Z&sks=b&skv=2023-01-03&sr=c&sp=racwdxltf&sig=CGJZbxOrpB9UNiR6n2E7BsNwR5Lt4lbQBmIhUCv1vKg%3D' --recursive
+azcopy copy ./google_scanned_objects 'https://embodiedaidata.blob.core.windows.net/dataset2/v-yonlin/Data/shapenetcorev2.zip?sv=2023-01-03&spr=https%2Chttp&st=2024-07-19T03%3A48%3A36Z&se=2024-07-26T03%3A48%3A00Z&skoid=63a24da2-bb37-4f2b-95a1-4253e0f68a4a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2024-07-19T03%3A48%3A36Z&ske=2024-07-26T03%3A48%3A00Z&sks=b&skv=2023-01-03&sr=c&sp=racwdxltf&sig=CGJZbxOrpB9UNiR6n2E7BsNwR5Lt4lbQBmIhUCv1vKg%3D' --recursive
 
 # download BOP-lm
 cd Data/BOP

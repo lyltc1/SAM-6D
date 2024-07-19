@@ -19,7 +19,7 @@ cd ../
 cd Pose_Estimation_Model
 python download_sam6d-pem.py
 
-### 
+### Install blender
 wget https://download.blender.org/release/Blender3.3/blender-3.3.1-linux-x64.tar.xz
 mkdir -p ~/blender
 tar -xvf blender-3.3.1-linux-x64.tar.xz -C ~/blender/

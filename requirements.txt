@@ -1,0 +1,28 @@
+numpy<2  # Need for pytorch that build with numpy 1.x, maybe can remove in the future
+setuptools==69.5.1  # Need to build pointnet2, higher versions cause errors
+fvcore
+xformers==0.0.18  # xformers 0.0.18 requires torch==2.0.0, but you have torch 2.1.0+cu121 which is incompatible
+torchmetrics==0.10.3
+blenderproc==2.6.1
+opencv-python
+## ISM
+omegaconf
+ruamel.yaml
+hydra-colorlog
+hydra-core
+gdown
+pandas
+imageio
+pyrender
+pytorch-lightning==2.3.3   # origin ==1.8.1
+pycocotools
+distinctipy
+git+https://github.com/facebookresearch/segment-anything.git#egg=segment-anything
+ultralytics==8.0.135
+## PEM
+timm
+gorilla-core==0.2.7.8
+trimesh==4.0.8
+gpustat==1.0.0
+imgaug
+einops

@@ -44,21 +44,16 @@ git clone https://github.com/JiehongLin/SAM-6D.git
 ```
 Install the environment and download the model checkpoints:
 ```
-cd SAM-6D
-sh prepare.sh
+conda create -n sam6d python=3.9.19
+conda activate sam6d
+# install pytorch according to your cuda version
+pip install torch==2.1.1 torchvision==0.16.1 --index-url https://download.pytorch.org/whl/cu121
+pip install xformers==0.0.23
 ```
 We also provide a [docker image](https://hub.docker.com/r/lihualiu/sam-6d/tags) for convenience.
 
 ### 2. Evaluation on the custom data
 ```
-# set the paths
-cd SAM-6D/SAM-6D
-export CAD_PATH=$(pwd)/Data/Example/obj_000005.ply    # path to a given cad model(mm)
-export RGB_PATH=$(pwd)/Data/Example/rgb.png           # path to a given RGB image
-export DEPTH_PATH=$(pwd)/Data/Example/depth.png       # path to a given depth map(mm)
-export CAMERA_PATH=$(pwd)/Data/Example/camera.json    # path to given camera intrinsics
-export OUTPUT_DIR=$(pwd)/Data/Example/outputs         # path to a pre-defined file for saving results
-
 # run inference
 cd SAM-6D
 sh demo.sh
