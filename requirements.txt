@@ -1,7 +1,7 @@
 numpy<2  # Need for pytorch that build with numpy 1.x, maybe can remove in the future
 setuptools==69.5.1  # Need to build pointnet2, higher versions cause errors
 fvcore
-xformers==0.0.18  # xformers 0.0.18 requires torch==2.0.0, but you have torch 2.1.0+cu121 which is incompatible
+xformers==0.0.23  # xformers 0.0.18 requires torch==2.0.0, but you have torch 2.1.0+cu121 which is incompatible
 torchmetrics==0.10.3
 blenderproc==2.6.1
 opencv-python

@@ -15,7 +15,6 @@ ln -s ~/eai_data/v-yonlin/Data/BOP Data/
 ln -s ~/eai_data/v-yonlin/Data/BOP-Templates/ Data/
 ln -s ~/eai_data/v-yonlin/Data/MegaPose-Training-Data/ Data
 
-
 # new terminal
 conda activate sam6d
 cd Data/
@@ -32,14 +31,11 @@ cd Data/
 python download_models.py --dataset shapenet
 unzip shapenetcorev2.zip -d .
 
-azcopy copy 'https://embodiedaidata.blob.core.windows.net/dataset2/v-yonlin/Data/BOP/MegaPose-Training-Data/MegaPose-GSO/google_scanned_objects/?sv=2023-01-03&spr=https%2Chttp&st=2024-07-19T03%3A48%3A36Z&se=2024-07-26T03%3A48%3A00Z&skoid=63a24da2-bb37-4f2b-95a1-4253e0f68a4a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2024-07-19T03%3A48%3A36Z&ske=2024-07-26T03%3A48%3A00Z&sks=b&skv=2023-01-03&sr=c&sp=racwdxltf&sig=CGJZbxOrpB9UNiR6n2E7BsNwR5Lt4lbQBmIhUCv1vKg%3D' 'https://embodiedaidata.blob.core.windows.net/dataset2/v-yonlin/Data/MegaPose-Training-Data/MegaPose-GSO/?sv=2023-01-03&spr=https%2Chttp&st=2024-07-19T03%3A48%3A36Z&se=2024-07-26T03%3A48%3A00Z&skoid=63a24da2-bb37-4f2b-95a1-4253e0f68a4a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2024-07-19T03%3A48%3A36Z&ske=2024-07-26T03%3A48%3A00Z&sks=b&skv=2023-01-03&sr=c&sp=racwdxltf&sig=CGJZbxOrpB9UNiR6n2E7BsNwR5Lt4lbQBmIhUCv1vKg%3D' --recursive
-
 # new terminal
 conda activate sam6d
 cd Data/
 python download_models.py --dataset GSO
 unzip google_scanned_objects.zip -d .
-azcopy copy ./google_scanned_objects 'https://embodiedaidata.blob.core.windows.net/dataset2/v-yonlin/Data/shapenetcorev2.zip?sv=2023-01-03&spr=https%2Chttp&st=2024-07-19T03%3A48%3A36Z&se=2024-07-26T03%3A48%3A00Z&skoid=63a24da2-bb37-4f2b-95a1-4253e0f68a4a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2024-07-19T03%3A48%3A36Z&ske=2024-07-26T03%3A48%3A00Z&sks=b&skv=2023-01-03&sr=c&sp=racwdxltf&sig=CGJZbxOrpB9UNiR6n2E7BsNwR5Lt4lbQBmIhUCv1vKg%3D' --recursive
 
 # download BOP-lm
 cd Data/BOP
@@ -67,3 +63,9 @@ unzip ycbv_base.zip
 unzip ycbv_models.zip -d ycbv
 unzip ycbv_test_all.zip -d ycbv
 unzip ycbv_train_pbr.zip -d ycbv
+
+# download BOP-hope
+export LOCAL_DIR=./tmp/
+export NAME=hope
+huggingface-cli download bop-benchmark/datasets --include "$NAME/*" --local-dir $LOCAL_DIR --repo-type=dataset
+# download BOP-template
